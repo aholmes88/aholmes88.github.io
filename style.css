@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 1.5em;
-    background-color: #070707;
+    background-image:linear-gradient(to right ,rebeccapurple ,black, rebeccapurple,black, rebeccapurple);
     margin: 1px;
     padding: 0;
 }
@@ -43,13 +43,25 @@ body {
 }
 
 #home {
-    background-color: #f0f0f0;
+    background-color: grey;
     padding: 2em;
+    margin: 5px;
+    border-radius: 5px;
     text-align: center;
 }
 
-#about, #contact,#projects{
-    background-color: #fff;
+#projects {
+    justify-content: center;
+    width: 400px;
+    height: auto;
+}
+
+#about, #contact,#what-I-Do,#journey {
+    background-color: grey;
+    border-radius:0px  50px 50px ;
+    align-items: center;
+    justify-content: space-between;
+    margin:30px;
     padding: 2em;
 }
 
@@ -61,7 +73,7 @@ h1, h2 {
 #nav-bar {
     position: sticky;
     top: 0;
-    background-color: #0000;
+    background-image:linear-gradient(to right ,rebeccapurple ,black, rebeccapurple,black, rebeccapurple);
     color: #fff;
     padding: 1em;
     text-align: center;
@@ -98,7 +110,23 @@ h1, h2 {
     padding: 5px;
     border-radius: 5px;
 }
+<<<<<<< HEAD
 
 #what-I-Do ,#journey{
     color: white
+=======
+#myProjects {
+    display: grid;
+    justify-content:space-between;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates flexible columns */
+    gap: 20px; /* Adds space between the grid items */
+}
+    
+
+#placeholder {
+    width:100%;
+    height: auto;
+    clip-path: circle();
+>>>>>>> 11884132e699552d404071a4bb2b62fd039d5145
 }
