@@ -1,24 +1,24 @@
 body {
-    font-family: Arial, sans-serif;
-    font-size: 1.5em;
-    background-image:linear-gradient( #000,black,green,black);
-    margin: 1px;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  background-image: linear-gradient(#000, black, green, black);
+  margin: 1px;
+  padding: 0;
 }
 
 #nav-bar2 {
-    margin: 10px ;
-    background-color: #000;
-    color: #fff;
+  margin: 10px;
+  background-color: #000;
+  color: #fff;
 }
 
 #GreenMoon {
-    width:500px;
-    clip-path: circle(50%);
-    position: absolute;
-    margin-top: 20px;
-    transform: rotateY(180deg);
-    z-index:-1;
+  width: 500px;
+  clip-path: circle(50%);
+  position: absolute;
+  margin-top: 20px;
+  transform: rotateY(180deg);
+  z-index: -1;
 }
 /*
 #nav-bar {
@@ -29,97 +29,104 @@ body {
 }*/
 
 #nav-bar ul {
-    list-style: none;
-    margin: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav-bar li {
-    margin-right: 20px;
-    text-decoration:none;
+  margin-right: 20px;
+  text-decoration: none;
 }
 
 .nav-link {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-    color: #ccc;
+  color: #ccc;
 }
 
 .nav-link:active {
-    color: #fff;
-    background-color: #555;
-    padding: 5px;
-    border-radius: 5px;
+  color: #fff;
+  background-color: #555;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 #home {
-    color:#ccc;
-    padding: 2em;
-    margin: 5px;
-    border-radius: 5px;
-    text-align: center;
+  color: #ccc;
+  padding: 2em;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 #projects {
-    justify-content: center;
-    width: 400px;
-    height: auto;
+  justify-content: center;
+  width: 400px;
+  height: auto;
 }
 
-#about, #contact,#what-I-Do,#journey {
-    color:transparent;
-    text-shadow: red 0px 10px;
-    align-items: center;
-    text-align: end;
-    justify-content: space-between;
-    margin:10%;
-    padding: 1em;
+#about,
+#contact,
+#what-I-Do,
+#journey {
+  color: transparent;
+  text-shadow: red 0px 10px;
+  align-items: center;
+  text-align: end;
+  justify-content: space-between;
+  margin: 10%;
+  padding: 1em;
 }
 
-h1, h2 {
-    margin-top: 0;
+h1,
+h2 {
+  margin-top: 0;
 }
 
-
-#socials, #programming-languages {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+#socials,
+#programming-languages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 #socials i {
-    margin:2px ;
-    padding :10px;
-    
+  margin: 2px;
+  padding: 10px;
 }
 
-#socials a, #programming-languages a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.2s ease;
+#socials a,
+#programming-languages a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-#socials a:hover, #programming-languages a:hover {
-    color: #ccc;
+#socials a:hover,
+#programming-languages a:hover {
+  color: #ccc;
 }
 
-#socials a:active, #programming-languages a:active {
-    color: #fff;
-    background-color: #555;
-    padding: 5px;
-    border-radius: 5px;
+#socials a:active,
+#programming-languages a:active {
+  color: #fff;
+  background-color: #555;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-#what-I-Do ,#journey{
-    color:transparent;
-    text-shadow: red 0px 10px;
+#what-I-Do,
+#journey {
+  color: transparent;
+  text-shadow: red 0px 10px;
 }
