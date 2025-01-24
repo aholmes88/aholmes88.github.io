@@ -69,7 +69,7 @@ var templateParams = {
   message: "",
 };
 
-emailjs.send("service_x3jcmgx", "template_9gxn2bk", templateParams).then(
+emailjs.send("x3jcmgx", "9gxn2bk", templateParams).then(
   (response) => {
     console.log("SUCCESS!", response.status, response.text);
   },
