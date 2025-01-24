@@ -51,3 +51,4 @@ function createInfiniteLoop(list, data) {
 // Create an infinite loop of socials and programming languages
 createInfiniteLoop(socialsList, socialsData);
 createInfiniteLoop(programmingLanguagesList, programmingLanguagesData);
+

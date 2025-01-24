@@ -56,16 +56,16 @@
         </ul>
     </nav>
 
-    <header id="home">
+    <section id="home">
 
-        <h2>Hello I am : <h1><em>Aaron Holmes</em></h1>
-        </h2>
+        <h3>Hello I am : <h1><em>Aaron Holmes</em></h1>
+        </h3>
 
-    </header>
+    </section>
 
     <section id="about">
 
-        <h3>Things to know about me</h3>
+        <h2>Things to know about me</h2>
 
         <p>I’m a Software Engineer with a strong passion about building innovative solutions that solve
             real-world problems. With a strong foundation in coding and a drive to constantly learn and grow, I’m
@@ -90,21 +90,40 @@
     <section id="contact">
 
         <h2>Get in Touch</h2>
-  <form>
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br>
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" required></textarea><br><br>
-    <input type="submit" value="Submit">
-  </form>
+        <form id="contact-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br><br>
+            <input id="submit" type="submit" value="Submit">
+        </form>
 
+    </section>
+    <section>
+        
     </section>
 
 
     <script src="script.js"></script>
+    <!--Used to mkae sure that the contact form is send and can be recieved-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ac1CkAuOZMcJFKbEm",
+      });
+   })();
+</script>
+  
 
 </body>
+<footer>
+    <p> &copy; Copyright 2024 Aaron Holmes</p>
+</footer>
+
 
 </html>

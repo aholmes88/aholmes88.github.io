@@ -130,3 +130,54 @@ h2 {
   color: transparent;
   text-shadow: red 0px 10px;
 }
+#contact
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    border-radius: 20px;
+}
+label{
+
+    margin: 1em;
+    font-family:cursive;
+    font-size: 2rem ;
+}
+input {
+    padding: 1em;
+    width:20%;
+    height:10%;
+    border-radius: 20px;
+    background-color: black;
+    color: yellow;
+    border-color: yellow;
+
+}
+#message {
+    padding: 1em; 
+    width:20%;
+    height:10%;
+    border-radius: 20px;
+    background-color: black;
+    color: yellow;
+    border-color: yellow;
+
+}
+#submit {
+margin-top: 10px;
+padding: 1em;
+
+}
+
+h2 {
+ justify-content: center;
+    
+}
+
+footer {
+  display:flex;
+  justify-content: center;
+  color: #fff;
+}
