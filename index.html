@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Holmes's Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/fba24484f1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fba24484f1.js"></script>
 </head>
 
 <body>
 
 
     <nav id="nav-bar">
+
 
         <ul>
 
@@ -23,91 +24,81 @@
             <li><a href="#contact" class="nav-link">Contact</a></li>
 
         </ul>
+        <button class="darkMode">Dark Mode</button>
     </nav>
-
-
-    <nav id="nav-bar2">
-        <img id="GreenMoon" src="assets/Anime Male Green Moon.jpg" alt="Anime Male Green Moon">
-
-        <ul id="socials">
-            <i class="fa-brands fa-github"></i>
-            <li><a href="https://github.com" target="_blank">GitHub</a></li>
-
-            <i class="fa-brands fa-linkedin"></i>
-            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-
-            <i class="fa-brands fa-git"></i>
-            <li><a href="https://git.com" target="_blank">Git</a></li>
-
-            <i class="fa-brands fa-js"></i>
-            <li><a href="https://www.javascript.com" target="_blank">JavaScript</a></li>
-
-            <i class="fab fa-android"></i>
-            <li><a href="https://kotlinlang.org" target="_blank">Kotlin</a></li>
-
-            <i class="fa-brands fa-java"></i>
-            <li><a href="https://www.java.com" target="_blank">Java</a></li>
-
-            <i class="fa-brands fa-python"></i>
-            <li><a href="https://www.python.org" target="_blank">Python</a></li>
-
-            <li><a href="https://isocpp.org" target="_blank">Cpp</a></li>
-
-        </ul>
-    </nav>
-
-    <section id="home">
-
-        <h3>Hello I am : <h1><em>Aaron Holmes</em></h1>
-        </h3>
-
-    </section>
-
+    <div class="container">
+        <aside id="greenMoon" class="moon"><img id="greenMoon" src="assets/Anime Male Green Moon.jpg"
+                alt="Anime Male Green Moon">
+        </aside>
+        <div id="changingNames">
+            <div>I am a :</div>
+            <div id="homeDisplay"></div>
+        </div>
+        <div id="changingLanguage">
+            <div>Languages :</div>
+            <div id="languageBox"></div>
+        </div>
+    </div>
+    <div id="empty-space">
+        <p> </p>
+    </div>
     <section id="about">
+        <div id="aboutMe">
+            <div></div>
+            <h2>Things about me</h2>
 
-        <h2>Things to know about me</h2>
+            <p>I’m a Software Engineer with a strong passion about building innovative solutions that solve
+                real-world problems.
+                <br><br>
+                With a strong foundation in coding and a drive to constantly learn and grow, I’m
+                excited to create technology that makes an impact.
+            </p>
+        </div>
+        </div>
 
-        <p>I’m a Software Engineer with a strong passion about building innovative solutions that solve
-            real-world problems. With a strong foundation in coding and a drive to constantly learn and grow, I’m
-            excited to create technology that makes an impact.</p>
 
-    </section>
-    <section id="what-I-Do">
-        <h2>What I Do</h2>
-        <p>As a Software Engineer, I’ve been diving into web development, programming languages, and
-            software designs. I’m currently honing my skills in front-end and full-stack development, with a focus on
-            creating intuitive and visually appealing user experiences. My favorite tools to work with are Python,
-            JavaScript.
-        </p>
-    </section>
-    <section id="journey">
-        <h2> My Journey</h2>
-        <p> My journey started with a fascination for technology as a kid. Whether it was
-            taking apart old gadgets or teaching myself to code, I’ve always loved figuring out how things work.
-            Now, as I pursue my degree, I’ve had the chance to work on exciting school projects, collaborate with
-            classmates, and explore the endless possibilities of software development.</p>
+        <section id="what-I-Do">
+            <div>
+                <h2>What I like to do</h2>
+                <p>As a Software Engineer, I’ve been diving into web development, programming languages, and
+                    software designs.<br><br> I’m currently honing my skills in front-end and full-stack development,
+                    with a
+                    focus on creating intuitive and visually appealing user experiences. My favorite tools to work with
+                    are
+                    Python,
+                    JavaScript.
+                </p>
+            </div>
+        </section>
+        <section id="journey">
+            <div>
+                <h2> My Journey so far</h2>
+                <p> My journey started with a fascination for technology as a kid. Whether it was
+                    taking apart old gadgets or teaching myself to code, I’ve always loved figuring out how things work.
+                    <br><br>
+                    Now, as I pursue my degree, I’ve had the chance to work on exciting school projects, collaborate
+                    with classmates, and explore the endless possibilities of software development.
+                </p>
+            </div>
+        </section>
+
+        <section>
+
+        </section>
     </section>
     <section id="contact">
 
-        <h2>Get in Touch</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br><br>
-            <input id="submit" type="submit" value="Submit">
-        </form>
-
-    </section>
-    <section>
+        
+        <div id="contact-container">
+            <a id="EmailMe" href="mailto: aaronholmes1104@gmail.com">Contact me via Email</a>
+            
+        </div>
 
     </section>
 
 
     <script src="script.js"></script>
-    
+
 
 
 </body>
