@@ -13,11 +13,12 @@ body {
   font-size: 2rem;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 1s, color 1s;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 /* The sweeping overlay */
 #sweep-overlay {
   position: fixed;
@@ -25,22 +26,24 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color:var(--bg-color);
+  background-color: var(--bg-color);
   transform: scale(0);
   transform-origin: center;
   z-index: 9999;
   pointer-events: none;
-  transition: transform 1s ease-out, opacity 0.3s ease-in-out;
   opacity: 1;
+  transition: background-color 0.5s ease;
 }
 
 #sweep-overlay.hide {
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.4s ease;
 }
 
 a {
   color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 #nav-bar2 {
@@ -77,14 +80,13 @@ a {
 
 #nav-bar li {
   margin-right: 20px;
-  text-decoration: none;
   text-shadow: var(--text-color) 5px 5px 5px;
 }
 
 .nav-link {
   color: var(--text-color);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -93,16 +95,15 @@ a {
 
 .nav-link:active {
   color: var(--text-color);
-  background-color: #555;
+  background-color: var(--bg-color);
   padding: 5px;
   border-radius: 5px;
 }
 
 #changingNames,
 #changingLanguage {
-  color: var(--text-color);
   display: flex;
-  direction: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 5px;
@@ -114,27 +115,25 @@ a {
   font-family: "sans-serif";
   font-size: 2rem;
   font-weight: 300;
-  text-shadow: 10px 10px 3.5px var(--text-color);
+  text-shadow: 2px 2px 3.5px var(--text-color);
   font-style: normal;
   margin: 1px;
   padding-left: 5px;
   border-radius: 5px;
   text-align: center;
   animation: textviscolor 3s infinite ease-in-out;
-  animation-fill-mode: left;
-  color: var(--text-color);
+  animation-fill-mode: forwards;
 }
 
 #about {
   color: var(--text-color);
   border-radius: 10px;
   display: grid;
-  grid-template-columns: repeat(3, 100px, 100px, 100px);
-  gap: 0.5rem;
+  grid-template-rows:repeat(3,300px);
   font-size: 24px;
-  justify-content: space-around;
+  justify-content:center;
   align-items: center;
-  margin-left: 5px;
+  margin: 5px;
 }
 
 #aboutMe,
@@ -143,35 +142,32 @@ a {
   color: var(--text-color);
   margin-top: 10px;
   margin-left: 5px;
-  width: 33vw;
   height: auto;
   background-color: transparent;
   backdrop-filter: blur(15px);
   border-radius: 25px;
   border: solid 1px;
   padding: 10px;
-  box-shadow: var(--text-color) 15px 10px 15px;
+  box-shadow: 0 0 10px var(--text-color);
 }
 
 @media (max-width: 768px) {
   #about {
     display: grid;
-    grid-template-columns: 1fr, 200px;
-    max-height: auto;
-    font-size: 16px;
+    grid-template-rows: 1fr;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in 1s;
   }
 
   #changingNames,
   #changingLanguage {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 20px;
   }
 
   #nav-bar {
-    display: flex;
     flex-direction: column;
     font-size: 20px;
   }
@@ -200,10 +196,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: space-around;
+  justify-content: center;
   margin-top: 10px;
   padding: 5px;
-  height: auto;
   background-color: transparent;
   backdrop-filter: blur(5px);
   border-radius: 15px;
@@ -215,7 +210,6 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
 }
 
 h1,
@@ -248,7 +242,7 @@ h2 {
 
 #EmailMe {
   text-decoration: none;
-  font-size:2rem;
+  font-size: 2rem;
   color: var(--text-color);
   border-radius: 20px;
 }
@@ -263,43 +257,42 @@ footer {
   justify-content: center;
   color: var(--text-color);
 }
+
 .darkMode {
   max-width: 80px;
   background-color: var(--bg-color);
   color: var(--text-color);
   border-radius: 25px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .darkMode:hover {
-  background-color: #4b4a4a;
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
+/* Animations */
 @keyframes textviscolor {
   0% {
     opacity: 0;
     visibility: hidden;
     color: blue;
   }
-
   17% {
     visibility: visible;
     opacity: 0.2;
     color: green;
   }
-
   33% {
     visibility: visible;
     opacity: 0.5;
     color: yellow;
   }
-
   66% {
     visibility: visible;
     opacity: 0.8;
     color: red;
   }
-
   100% {
     visibility: visible;
     opacity: 1;

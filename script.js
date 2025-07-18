@@ -45,45 +45,45 @@ setInterval(createLanguageLoop, 3000);
 
 
 // Testing this out
- function toggleTheme() {
-  const root = document.documentElement;
-  const overlay = document.getElementById("sweep-overlay");
+const toggleBtn = document.getElementById("toggleTheme");
+let isDark = false;
 
-  // Show the sweep overlay
-  overlay.classList.remove("hide");
-  overlay.style.transform = "scale(1)";
+toggleBtn.addEventListener("click", () => {
+  isDark = !isDark;
 
-  // After the sweep shows, switch theme
-  setTimeout(() => {
-    const currentTheme = root.getAttribute("data-theme");
+  const tl = gsap.timeline();
 
-    if (currentTheme === "dark") {
-      root.removeAttribute("data-theme");
-    } else {
-      root.setAttribute("data-theme", "dark");
-    }
+  // Animate the body background and text
+  tl.to("body", {
+    backgroundColor: isDark ? "#121212" : "#ffffff",
+    color: isDark ? "#f1f1f1" : "#121212",
+    duration: 0.8,
+    ease: "power2.inOut"
+  });
 
-    // Start fading out
-    overlay.classList.add("hide");
-  
+  // Animate key sections (like nav or overlay)
+  tl.to(["#aboutMe", "#journey", "#what-I-Do","changingNames","changingLanguage"], {
+    backgroundColor: isDark ? "#1e1e1e" : "#f9f9f9",
+    color: isDark ? "#f1f1f1" : "#121212",
+    duration: 0.6,
+    stagger: 0.1,
+    ease: "power1.out"
+  }, "-=0.6");
 
-  // Reset overlay after transition ends
-  overlay.addEventListener("transitionend", () => 
-    {
-    overlay.style.transform = "scale(0)";
-    overlay.style.opacity="1";
-  }, 
-  { once: true }// `once: true` ensures it only runs once per click
-);
- },600); //Waits for the  sweep to show
-};
+  // Animate individual text elements (optional polish)
+  tl.to(["h1", "h2", "p", "a", "li"], {
+    color: isDark ? "#f1f1f1" : "#121212",
+    duration: 0.4,
+    stagger: 0.03,
+    ease: "sine.out"
+  }, "-=0.6");
+});
+
 /*const lightMode = document.getElementsByClassName(lightMode);
 const darkMode = document.getElementsByClassName(darkMode)
 function lightbtn(){
   if (lightMode)
 
 };*/
-
-
 
 
