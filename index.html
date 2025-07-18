@@ -7,6 +7,8 @@
     <title>Aaron Holmes's Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/MorphSVGPlugin.min.js"></script>
 </head>
 
 <body class="animated-bg">
@@ -24,8 +26,11 @@
             <li><a href="#contact" class="nav-link">Contact</a></li>
 
         </ul>
-        <button id="toggleTheme" class="darkMode">Dark Mode</button>
-        <div id="sweep-overlay" class="hide" ></div>
+       <button id="toggleTheme" aria-label="Toggle theme">
+            <svg id="themeIcon" viewBox="0 0 24 24" width="24" height="24">
+                <path id="iconPath" d="" fill="currentColor"></path>
+            </svg>
+        </button>
     </nav>
     <div class="container">
         <aside id="greenMoon" class="moon"><img id="greenMoon" src="assets/Anime Male Green Moon.jpg"

@@ -46,23 +46,49 @@ setInterval(createLanguageLoop, 3000);
 
 // Testing this out
 const toggleBtn = document.getElementById("toggleTheme");
+const iconPath = document.getElementById("iconPath");
+const root = document.documentElement;
+
+const sunPath =
+  "M12 4.5V2M12 22v-2.5M4.93 4.93l-1.77-1.77M20.84 20.84l-1.77-1.77M4.5 12H2m20 0h-2.5M4.93 19.07l-1.77 1.77M20.84 3.16l-1.77 1.77M12 7a5 5 0 100 10 5 5 0 000-10z";
+
+const moonPath =
+  "M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z";
+
 let isDark = false;
+
+// Set initial icon
+iconPath.setAttribute("d", sunPath);
 
 toggleBtn.addEventListener("click", () => {
   isDark = !isDark;
 
   const tl = gsap.timeline();
 
-  // Animate the body background and text
+  // Morph icon
+  tl.to(iconPath, {
+    duration: 0.6,
+    morphSVG: isDark ? moonPath : sunPath,
+    ease: "power2.inOut"
+  });
+
+  // Toggle data-theme attribute for CSS
+  if (isDark) {
+    root.setAttribute("data-theme", "dark");
+  } else {
+    root.removeAttribute("data-theme");
+  }
+
+  // Animate body background/text color
   tl.to("body", {
     backgroundColor: isDark ? "#121212" : "#ffffff",
     color: isDark ? "#f1f1f1" : "#121212",
     duration: 0.8,
     ease: "power2.inOut"
-  });
+  }, "<");
 
-  // Animate key sections (like nav or overlay)
-  tl.to(["#aboutMe", "#journey", "#what-I-Do","changingNames","changingLanguage"], {
+  // Animate sections
+  tl.to(["#aboutMe", "#journey", "#what-I-Do"], {
     backgroundColor: isDark ? "#1e1e1e" : "#f9f9f9",
     color: isDark ? "#f1f1f1" : "#121212",
     duration: 0.6,
@@ -70,20 +96,13 @@ toggleBtn.addEventListener("click", () => {
     ease: "power1.out"
   }, "-=0.6");
 
-  // Animate individual text elements (optional polish)
-  tl.to(["h1", "h2", "p", "a", "li"], {
+  // Animate general text
+  tl.to(["h1", "h2", "p", "a", "li","#changingNames", "#changingLanguage"], {
     color: isDark ? "#f1f1f1" : "#121212",
     duration: 0.4,
     stagger: 0.03,
     ease: "sine.out"
   }, "-=0.6");
 });
-
-/*const lightMode = document.getElementsByClassName(lightMode);
-const darkMode = document.getElementsByClassName(darkMode)
-function lightbtn(){
-  if (lightMode)
-
-};*/
 
 
